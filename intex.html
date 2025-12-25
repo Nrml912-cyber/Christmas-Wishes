@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merry Christmas Annu Didi 🎄</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+/* 🎨 BACKGROUND */
+body{
+  height:100vh;
+  overflow:hidden;
+  background:linear-gradient(-45deg,#b30000,#006400,#d4af37,#8b0000);
+  background-size:400% 400%;
+  animation:bgMove 12s ease infinite;
+}
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* SLIDER */
+.slider-container{
+  width:100vw;
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+.slider{
+  display:flex;
+  transition:transform .9s ease-in-out;
+}
+.slide{
+  width:100vw;
+  height:100vh;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  padding:25px;
+}
+
+/* TEXT */
+.slide h1{
+  font-size:54px;
+  font-family:'Great Vibes', cursive;
+  color:#ffd700;
+  margin-bottom:18px;
+  min-height:70px;
+  text-shadow:0 0 15px rgba(255,215,0,.7);
+}
+.slide p{
+  font-size:19px;
+  max-width:720px;
+  line-height:1.7;
+}
+
+/* 🔊 BIG MUSIC ICON */
+.music-icon{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:rgba(255,215,0,0.95);
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:50px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+.music-text{
+  margin-top:15px;
+  font-size:16px;
+  opacity:.9;
+}
+
+/* 🔘 BOTTOM BUTTONS */
+.nav-bottom{
+  position:absolute;
+  bottom:25px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:18px;
+  z-index:9999;
+}
+.nav-btn{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,215,0,0.95);
+  font-size:18px;
+  cursor:pointer;
+}
+.nav-btn:active{transform:scale(0.9);}
+
+/* ❄ SNOW */
+.snow{
+  position:fixed;
+  top:-10px;
+  color:white;
+  animation:fall linear infinite;
+  z-index:5;
+  pointer-events:none;
+}
+@keyframes fall{
+  to{transform:translateY(110vh)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 MUSIC (muted autoplay trick) -->
+<audio id="bgMusic" autoplay loop muted>
+  <source src="christmas.mp3" type="audio/mpeg">
+</audio>
+
+<div class="slider-container">
+
+  <div class="slider" id="slider">
+
+    <!-- SLIDE 1 : MUSIC -->
+    <div class="slide">
+      <h1>Merry Christmas Annu Didi 🎄</h1>
+      <div class="music-icon" id="musicBtn">🔊</div>
+      <div class="music-text">Tap to turn on music</div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+      <h1 data-text="Didi For You ✨"></h1>
+      <p>
+        Didi, Christmas ke is festive season mein bas yehi dua hai ki aapki smile itni bright ho  
+    ki neighbour ka bulb bhi sharma jaye 😄.  
+    Santa se request hai ki aapke liye unlimited chocolates laaye,  
+    memes ka treasure ho, aur thodi si naughty surprises bhi ho 🎁✨.  
+
+    Aur haan, Christmas calories ke rules alag hote hain —  
+    aap jitna khaye utna count mat karna, ye officially allowed hai! 🍫😜  
+    Gifts me aapko wohi mile jo aap secretly chah rahi thi,  
+    aur aise moments mile jo yaadgar ban jaye.  
+
+    Agar snowman se aap selfie lena chahein, toh woh bhi ready ho jaye,  
+    aur har cup of cocoa aapko double happiness de ☕❄.  
+
+    Basically, Christmas ke har second me aap hasi, love, aur thodi mischief ka combo feel karo.  
+    Aur yaad rahe — hasi free hai, unlimited hai, aur ye special gift sirf aap ke liye hai 😉🎄
+      </p>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+      <h1 data-text="Lots of Love ❤️"></h1>
+      <p>
+        You are not just a sister, Annu Didi, you are an inspiration, a guiding light, and a source of endless love. 💫  
+    Your care, warmth, and support always make life brighter.  
+    May every day bring you joy, success, and endless laughter.  
+    Sending you all my love, hugs, and blessings this Christmas. 🤍
+      </p>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide">
+      <h1 data-text="God Bless You 🙏"></h1>
+      <p>
+        Bhagwan aap par hamesha apni kripa banaye rakhe ✨  
+        Aapki zindagi me hamesha khushi,
+        success aur peace rahe 🎄  
+        Merry Christmas Annu Didi ❤️
+      </p>
+    </div>
+
+  </div>
+
+  <!-- SLIDE BUTTONS -->
+  <div class="nav-bottom">
+    <button class="nav-btn" id="prev">◀</button>
+    <button class="nav-btn" id="next">▶</button>
+  </div>
+
+</div>
+
+<script>
+/* ❄ SNOW */
+for(let i=0;i<35;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=(Math.random()*10+10)+"px";
+  snow.style.animationDuration=(Math.random()*5+5)+"s";
+  document.body.appendChild(snow);
+}
+
+/* SLIDER */
+let index=0;
+const slider=document.getElementById("slider");
+const slides=document.querySelectorAll(".slide");
+
+function showSlide(){
+  slider.style.transform=`translateX(-${index*100}vw)`;
+  const h1=slides[index].querySelector("h1[data-text]");
+  if(h1) typeWriter(h1);
+}
+document.getElementById("next").onclick=()=>{
+  index=(index+1)%slides.length;
+  showSlide();
+};
+document.getElementById("prev").onclick=()=>{
+  index=(index-1+slides.length)%slides.length;
+  showSlide();
+};
+
+/* ✍️ TYPEWRITER */
+function typeWriter(el){
+  const text=el.getAttribute("data-text");
+  el.innerHTML="";
+  let i=0;
+  const t=setInterval(()=>{
+    el.innerHTML+=text.charAt(i++);
+    if(i>=text.length) clearInterval(t);
+  },120);
+}
+
+/* 🔊 MUSIC ON / OFF */
+const music=document.getElementById("bgMusic");
+const musicBtn=document.getElementById("musicBtn");
+
+musicBtn.onclick=()=>{
+  music.muted=false;
+  music.play();
+  index=1;
+  showSlide();
+};
+</script>
+
+</body>
+</html>
